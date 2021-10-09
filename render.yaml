@@ -1,13 +1,13 @@
 services:
 - type: web
-  name: hasura
+  name: G2
   env: docker
   autoDeploy: false
   healthCheckPath: /healthz
   envVars:
   - key: HASURA_GRAPHQL_DATABASE_URL
     fromDatabase:
-      name: hasura
+      name: g2
       property: connectionString
   - key: HASURA_GRAPHQL_ENABLE_CONSOLE
     value: true
